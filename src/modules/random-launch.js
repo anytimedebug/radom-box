@@ -1,16 +1,16 @@
 const REMOVE = 'randomLaunch/REMOVE';
 const SHUFFLE = 'randomLaunch/SHUFFLE';
 const CHANGE = 'randomLaunch/CHANGE';
+const FETCH = 'randomLaunch/FETCH';
 
 export const remove = name => ({type: REMOVE, payload: name});
 export const change = count => ({type: CHANGE, payload: count});
 export const shuffle = colCount => ({type: SHUFFLE, payload: colCount});
+export const fetch = colCount => ({type: FETCH, payload: colCount});
 
 
 const initialState = {
-    employees: [
-
-    ].sort(),
+    employees: [],
     colCount: 5,
     randomTable: []
 };
@@ -67,6 +67,11 @@ const randomLaunch = (state = initialState, action) => {
             return {
                 ...state,
                 colCount: action.payload
+            };
+        case FETCH:
+            return {
+                ...state,
+                employees: action.payload
             };
         default:
             return state;
