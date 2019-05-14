@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/EmployeesList'
+import EmployeeListContainer from "./containers/EmployeeListContainer";
+import RandomTableContainer from "./containers/RandomTableContainer";
+import RandomFooterContainer from "./containers/RandomFooterContainer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="container" id="page-wrapper">
+          <div id="sidebar-wrapper">
+            <EmployeeListContainer />
+          </div>
+          <div id="page-content-wrapper">
+              <div className="container-fluid">
+                  <h1>Random Box</h1>
+                  <RandomTableContainer />
+                  <RandomFooterContainer />
+              </div>
+          </div>
+      </div>
   );
 }
 

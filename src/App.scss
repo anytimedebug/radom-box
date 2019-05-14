@@ -1,0 +1,62 @@
+#page-wrapper {
+  padding-left: 250px;
+
+  #sidebar-wrapper {
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    margin-left: -150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .sidebar-nav {
+      width: 150px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        text-indent: 1.5em;
+        line-height: 2.8em;
+      }
+
+      li:hover {
+        color: #fff;
+        background: gray;
+      }
+
+      .sidebar-brand {
+        font-size: 1.3em;
+        line-height: 3em;
+      }
+
+    }
+
+  }
+
+  #page-content-wrapper {
+    width: 100%;
+    padding: 20px;
+
+    .container-fluid {
+
+      h1 {
+        text-align: center;
+      }
+
+      #random-table {
+        .table {
+          text-align: center;
+
+          td {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+          }
+
+        }
+      }
+    }
+  }
+
+}
+
